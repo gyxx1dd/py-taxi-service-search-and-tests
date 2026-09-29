@@ -16,10 +16,11 @@ class ModelsTest(TestCase):
         obj1 = Driver.objects.create(
             license_number="HFN22222",
         )
+
         self.assertEqual(str(obj1),
-                         f"{obj1.username}"
-                         f"({obj1.first_name}"
-                         f"{obj1.last_name})")
+                         f"{obj1.username} ({obj1.first_name} "
+                         f"{obj1.last_name})",
+                         )
         self.assertEqual(obj1.get_absolute_url(),
                          f"/drivers/{obj1.id}/")
 
