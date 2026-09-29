@@ -7,4 +7,3 @@ class PublicViewTest(TestCase):
         url = reverse("taxi:manufacturer-list")
         res = self.client.get(url)
         self.assertNotEqual(res.status_code, 200)
-
