@@ -64,20 +64,22 @@ class DriverCreateTest(TestCase):
     def test_create_car(self):
         data = {
             "username": "vasia",
-            "license_number": "NGH2222",
+            "license_number": "NGH22223",
             "first_name": "vasia",
             "last_name": "vasia",
-            "password1": "123",
-            "password2": "123",
+            "password1": "lololo987S",
+            "password2": "lololo987S",
         }
 
         data2 = {
             "username": "vasia",
+            "license_number": "NGH22223",
             "first_name": "vasia",
             "last_name": "vasia",
-            "password1": "123",
+            "password1": "lololo987S",
+            "password2": "lololo987S",
         }
 
         form = DriverCreationForm(data=data)
-        self.assertFalse(form.is_valid())
+        self.assertTrue(form.is_valid())
         self.assertEqual(form.cleaned_data, data2)

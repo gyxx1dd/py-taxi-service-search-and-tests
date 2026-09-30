@@ -15,6 +15,9 @@ class ModelsTest(TestCase):
     def test_driver(self):
         obj1 = Driver.objects.create(
             license_number="HFN22222",
+            username="admin",
+            first_name="admin",
+            last_name="admin",
         )
 
         self.assertEqual(str(obj1),
