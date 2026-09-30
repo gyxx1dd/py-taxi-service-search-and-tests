@@ -16,11 +16,11 @@ class PublicViewTest(TestCase):
             password="123",
         )
         self.client.force_login(user)
-        man1 = Manufacturer.objects.create(
+        Manufacturer.objects.create(
             name="bmw",
             country="germany"
         )
-        man2 = Manufacturer.objects.create(
+        Manufacturer.objects.create(
             name="tesla",
             country="USA",
         )
@@ -70,12 +70,12 @@ class PublicViewTest(TestCase):
             password="123",
         )
         self.client.force_login(user)
-        man1 = Driver.objects.create(
+        Driver.objects.create(
             username="admin2",
             password="123",
             license_number="JFJ33333"
         )
-        man2 = Driver.objects.create(
+        Driver.objects.create(
             username="admin3",
             password="123",
             license_number="JFJ22222"
